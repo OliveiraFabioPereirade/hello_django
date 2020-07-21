@@ -1,14 +1,6 @@
 
-Criando novas rotas:
-####################
-
-Entrar no terminal do PyCharm
-					// notar que já vem com a virtual env aberta
-
-No terminal, execute:
-
-$ django-admin startapp core		// cria aplicação que será o coração do projeto
-
+Cria rota hello para pagina:
+############################
 
 No arquivo "settings" da pasta "hello_django":
 
@@ -22,17 +14,20 @@ Inserir "path('hello/', views.hello)" na lista "urlpatterns"
 					//cria rota 'hello/' que aponta método "hello" no arquivo "views" da pasta "core"  
 Inserir antes da lista "urlpatterns" a linha "from core import views"
 					//permite importação do métodos do arquivo "views"
+
+No arquivo "views" da pasta "core":
+
+Acrescentar na linha "from django.shortcuts import render" o módulo "HttpResponse"
+					// para formatar a resposta a requisições HTTP
+
+Inserir o método:
+def hello(request):
+    return HttpResponse('Hello World!')
+					// para responder a requisições na rota 'hello/'
+
 No PyCharm, na aba RUN:
-Dar stop e run em "manage.py"		// para ver modificaçãoes
 
-
-
-
-
-
-
-
-
+Dar stop e run em "manage.py"		// para ver modificações
 
 
 

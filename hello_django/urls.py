@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+# from django.contrib import admin # não presente originalmente, mas presente no arquivo do porfessor
+# from django.urls import path     # não presente originalmente, mas presente no arquivo do porfessor
+from core import views             # importa módulo "views" da pasta "core"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('hello/', views.hello) # cria rota 'hello/' que aponta método "hello" no arquivo "views" da pasta "core"
 ]

@@ -1,0 +1,20 @@
+Cria aplicacão que será o coração do projeto:
+############################################
+
+Entrar no terminal do PyCharm		// notar que já vem com a virtual env aberta
+
+No terminal, execute:
+
+$ django-admin startapp core		// cria aplicação que será o coração do projeto
+
+
+
+
+
+
+
+
+
+
+
+
