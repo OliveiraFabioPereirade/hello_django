@@ -1,0 +1,105 @@
+#######################################################################
+Cria virtual env, instala django, e configura PyCharm para rodar página:
+
+No console, execute:
+
+$ python -m venv dev_django		// cria uma virtual env chamada dev_django
+                                        // caminha não pode ter espaços ou caracteres especiais
+
+$ cd .\dev_django			// entra no diretório da virtual env
+
+$ .\Scripts\activate			// ativa a virtual env
+					// após esta execução, antes do caminha aparece (dev_django)
+
+$ pip install django			// instala o django nesta virtual env (dev_django)
+
+$ cd <local do app>                     // vai para local onde estará sua aplicação
+
+$ pip freeze				// mostra pacotes instalados na virtual env, inclusive o django
+
+$ django-admin startproject hello_django	
+					// cria projeto django chamado "hello_django"
+
+
+Abra a pasta "hello_django" no PyCharm
+
+Entrar em File/Settings/Project:hello_django/Project Interpreter
+					// o PyCharm estaráutilizando o interpretador padrão
+
+Clique no "interpretador padrão" e depois em "show all"
+					// aparecerá uma lista onde não encontrará a nova virtual env
+
+Clique no botão "+"			// abrirá uma nova janela
+
+Clique em "Existing enviroment" e selecione "C:\dev_jango\Scripts\python.exe" 
+					// para selecionar a virtual env com django instalado
+
+Clique "ok" nesta janela e na anterior	// para confirmar seleção do interpretador
+
+Clique em "apply" e "ok" na janela "settings"
+					// para encerrar esta configuração
+
+
+Abrir o arquivo "manage.py"
+
+Executar o "manage.py"			// para inseri-lo no campo execução (canto superior direito)
+
+Clicar no campo execução, e no campo "edit configurations"
+
+Inserir "runserver" no campo "Parameters" e clicar "apply" e "ok"
+					// para na próxima execução do "manage.py" iniciar um servidor web
+
+Executar o "manage.py"			// inicia aplicação com servidor web
+
+Clicar no link gerado para visualizar página do projeto "hello_django"
+					// será exibida a página padrão do django
+
+
+Para executar o "hello_django" a partir do console:
+
+Dentro do diretório do "hello_django", execute:
+
+$ python manage.py runserver
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
