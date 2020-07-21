@@ -6,5 +6,5 @@ from django.shortcuts import render, HttpResponse
 
 # Create your views here.
 
-def hello(request): # método "hello" que recebe os parâmetros da request
-    return HttpResponse('Hello World!') # e retorna resposta HTTP
+def hello(request, nome, idade): # método "hello" que recebe os parâmetros da request, nome e idade
+    return HttpResponse('<h1>Olá {} de {} anos de idade!' .format(nome, idade)) # e retorna resposta HTTP

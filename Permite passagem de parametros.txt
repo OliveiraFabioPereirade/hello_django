@@ -1,0 +1,71 @@
+
+Permite passagem de parâmetros:
+###############################
+
+Depois que a rota '\hello' foi criada, a página http://127.0.0.1:8000/ retorna erro
+porque a rota index não foi criada.
+
+Mas a página http://127.0.0.1:8000/hello/ retorna o texto "Hello World!"
+
+
+
+Agora vamos passar parâmetros para a rota '\hello'
+
+No arquivo "urls" da pasta "hello_django":
+
+Modificar a linha "path('hello/', views.hello)"
+para              "path('hello/<nome>/<int:idade>', views.hello)
+					//permite passar parâmetros para a rota '\hello'
+
+No arquivo "views" da pasta "core":
+
+Modificar a linha "return HttpResponse('Hello World!')"
+para		  "return HttpResponse('<h1>Olá {} de {} anos de idade!' .format(nome, idade))"
+					// utiliza parâmetros passados na resposta HTTP
+
+No PyCharm, na aba RUN:
+
+Dar stop e run em "manage.py"		// para ver modificações
+
+
+Agora a página http://127.0.0.1:8000/hello/ retorna erro
+
+Mas se passamos parâmetros, como http://127.0.0.1:8000/hello/Fabio/43
+ela retorna o texto "Olá Fabio de 43 anos de idade!"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

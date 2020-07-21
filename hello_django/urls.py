@@ -22,5 +22,9 @@ from core import views             # importa módulo "views" da pasta "core"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('hello/', views.hello) # cria rota 'hello/' que aponta método "hello" no arquivo "views" da pasta "core"
+    path('hello/<nome>/<int:idade>', views.hello) # cria rota 'hello/' que aponta método "hello" no arquivo "views" da pasta "core"
+#           |            |    |
+#           |            |    +--> segundo parâmetro
+#           |            +--> força segundo parâmetro como inteiro (página da erro se for outro tipo)
+#           +--> segundo parâmetro
 ]
